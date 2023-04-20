@@ -1,0 +1,61 @@
+@use "../abstract" as *;
+
+* {
+    &,
+    &::after,
+    &::before {
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    // Global convertion
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+
+    font-weight: 800;
+    line-height: 1.7;
+
+    background-color: darken($palleteGrey, 12.6);
+    color: $palleteWhite;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    position: absolute;
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(
+        $color: $palleteRed,
+        $alpha: 0.3
+    ); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: none; /* creates padding around scroll thumb */
+
+    transition: background-color;
+    &:hover {
+        background-color: rgba($color: $palleteRed, $alpha: 0.5);
+    }
+}

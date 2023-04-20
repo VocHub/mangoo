@@ -1,0 +1,14 @@
+.slick-prev::before {
+  display: none;
+}
+
+.slick-next::before {
+  display: none;
+}
+
+.carousel {
+}
+
+.custom-block {
+  background: rgba(23, 23, 23, 0.3);
+}

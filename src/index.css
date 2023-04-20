@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .clip-carousel-bg {
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .custom-block {
+    background: rgba(23, 23, 23, 0.3);
+  }
+  .select-btn[data-state="active"] > * {
+    @apply btn-primary;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  line-height: 1.7;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+::-webkit-scrollbar {
+  position: absolute;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    218,
+    0,
+    55,
+    0.3
+  ); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: none; /* creates padding around scroll thumb */
+  transition: background-color;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(218, 0, 55, 0.5);
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: translateX(-500%);
+  }
+  50% {
+    opacity: 0.35;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes inputScale {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.center-preset {
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.btn-click:hover {
+  cursor: pointer;
+}
+
+.slick-arrow {
+  display: hidden !important;
+}
+
+.mantine-MultiSelect-input {
+  background-color: transparent;
+  border: none;
+}
+.mantine-MultiSelect-input:focus {
+  outline: none;
+}
+.mantine-MultiSelect-root:focus {
+  outline: none;
+}
+.mantine-MultiSelect-searchInput:focus {
+  outline: none;
+}
+.mantine-MultiSelect-dropdown {
+}
+
+.bg-triangle-clip::after {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

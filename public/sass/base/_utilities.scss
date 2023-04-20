@@ -1,0 +1,42 @@
+@use "../abstract" as *;
+
+.block {
+    background: rgba($palleteBlack, 0.3);
+    height: 35rem;
+}
+
+.pagePadding {
+    &--upright {
+        padding: 2.5rem 0;
+    }
+
+    &--sideways {
+        padding: 0 2.5rem;
+    }
+
+    &--both {
+        &--big {
+            padding: 3rem;
+        }
+        &--normal {
+            padding: 2.5rem;
+        }
+    }
+}
+
+.overflow-off {
+    overflow: hidden;
+}
+
+.mw {
+    &--165 {
+        max-width: 165rem;
+    }
+}
+
+.i-d {
+    &__center {
+        transform: translateX(-50%);
+        left: 50%;
+    }
+}
